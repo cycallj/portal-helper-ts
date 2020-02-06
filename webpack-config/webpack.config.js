@@ -23,6 +23,16 @@ const webpackConfig = {
             }
           }
         ]
+      },
+      {
+        test: /\.scss$/,
+        // 只针对业务.scss文件进行编译
+        include: [path.join(__dirname, './../', 'app')],
+        use: [
+          'style-loader',
+          'css-loader', // 可选项：css module 
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -32,7 +42,10 @@ const webpackConfig = {
         template: 'app/pages/index.html'
       }
     )
-  ]
+  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.jsx']//该参数将.jsx添加进去，可以再 js中 import加载.jsx
+  }
 };
 
 module.exports = webpackConfig;

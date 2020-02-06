@@ -1,0 +1,22 @@
+.test {
+  color: blue;
+  font-size: 40px;
+}
+
+.person {
+  font-size: 18px;
+
+  .person__prop {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .person__prop--name {
+    color: blue;
+  }
+
+  .person__prop--age {
+    color: brown;
+  }
+}

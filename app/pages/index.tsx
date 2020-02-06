@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Main from '../components/index/Main';
+
 const render = () => {
   ReactDOM.render(
-    <div>12431</div>,
+    <Main />,
     document.getElementById('app')
   )
 }
 
-render()
+render();
