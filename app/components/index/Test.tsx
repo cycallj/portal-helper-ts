@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 
+import { Button } from 'antd';
+
 let log = (target: any) => {
   console.log(target);
 }
-// function log(target: any) {
+// function log(target: any) { // 装饰器：一种语法糖
 //   console.log(target);
 // }
 
@@ -15,7 +17,10 @@ class Test extends Component {
 
   render() {
     return (
-      <div>test12</div>
+      <div>
+        <div>test12</div>
+        <Button type="primary">button</Button>
+      </div>
     );
   }
 }
