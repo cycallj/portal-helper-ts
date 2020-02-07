@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TsconfigPahtsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const webpackConfig = {
   entry: {
@@ -19,7 +20,8 @@ const webpackConfig = {
           {
             loader: 'awesome-typescript-loader',
             options: {
-
+              useCache: true,
+              cacheDirectory: path.join(__dirname, './../','.cache-loader')
             }
           }
         ]
@@ -30,8 +32,21 @@ const webpackConfig = {
         include: [path.join(__dirname, './../', 'app')],
         use: [
           'style-loader',
-          'css-loader', // 可选项：css module 
-          'sass-loader'
+          {
+            loader: 'cache-loader',
+            options: {
+              cacheDirectory: path.join(__dirname, './../','.cache-loader')
+            }
+          },
+          'css-loader', // 可选项：css module options or ('typings-for-css-modules-loader')
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: [path.join(__dirname, './../', 'app/assets/css')]
+              }
+            }
+          }
         ]
       }
     ]
@@ -44,7 +59,13 @@ const webpackConfig = {
     )
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx']//该参数将.jsx添加进去，可以再 js中 import加载.jsx
+    extensions: ['.ts', '.tsx', '.js', '.jsx'], //该参数将.jsx添加进去，可以再 js中 import加载.jsx
+    plugins: [
+      new TsconfigPahtsPlugin({
+        // 配置文件引入 tsconfig.json
+        configFile: path.join(__dirname, './../', 'tsconfig.json')
+      })
+    ]
   }
 };
 

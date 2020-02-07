@@ -1,3 +1,5 @@
+@import 'common/variables.scss';
+
 .test {
   color: blue;
   font-size: 40px;
@@ -17,6 +19,11 @@
   }
 
   .person__prop--age {
-    color: brown;
+    color: $red;
+
+    > div {
+      width: 50px;
+      @include ellipsis(40px);
+    }
   }
 }
