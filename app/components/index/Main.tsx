@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Test from '@components/index/Test';
 
-import '../../assets/css/index/main.scss';
+import '@css/index/main.scss';// 在 tsconfig.json 里配置
 
 class Main extends Component {
   constructor(props: any) {

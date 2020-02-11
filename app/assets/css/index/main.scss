@@ -1,4 +1,4 @@
-@import 'common/variables.scss';
+@import 'common/variables.scss';//在 cssRules.js 中配置
 
 .test {
   color: blue;
@@ -15,7 +15,7 @@
   }
 
   .person__prop--name {
-    color: blue;
+    color: rgb(199, 33, 185);
   }
 
   .person__prop--age {
