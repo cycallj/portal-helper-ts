@@ -12,6 +12,13 @@ module.exports = [
         options: {
           useCache: true,
           cacheDirectory: resolve('.cache-loader'),
+          babelOptions: {
+            // 不需要 .babelrc文件
+            babelrc: false,
+            plugins: [
+              'react-hot-loader/babel'
+            ]
+          },
           getCustomTransformers: () => ({
             before: [
               tsImportPluginFactory({

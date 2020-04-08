@@ -1,5 +1,6 @@
 import React from 'react';
 import { inject, observer } from 'mobx-react';
+import { hot } from 'react-hot-loader';
 
 import { ComponentExt } from '@utils/reactExt';
 
@@ -7,6 +8,7 @@ interface IProps {
   globalStore?: IGlobalStore.GlobalStore
 }
 
+@hot(module)
 @inject('globalStore')
 @observer
 class Counter extends ComponentExt<IProps> {
