@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Test from '@public/Test';
+import Counter from '@view/index/Counter/Counter';
 
 import '@css/index/main.scss';// 在 tsconfig.json 里配置
 
@@ -20,7 +21,10 @@ class Main extends Component {
           <div>age:</div>
           <div>12124234</div>
         </div>
+
         <Test/>
+
+        <Counter/>
       </div>
     );
   }
