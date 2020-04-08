@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Test from '@components/index/Test';
+import Test from '@public/Test';
 
 import '@css/index/main.scss';// 在 tsconfig.json 里配置
 
