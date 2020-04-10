@@ -6,7 +6,7 @@ class Home extends ComponentExt {
   render() {
     return (
       <div>Home</div>
-    )
+    );
   }
 }
 

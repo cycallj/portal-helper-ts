@@ -6,7 +6,7 @@ class Page extends ComponentExt {
   render() {
     return (
       <div>Page</div>
-    )
+    );
   }
 }
 
