@@ -1,14 +1,13 @@
 const TsconfigPahtsPlugin = require('tsconfig-paths-webpack-plugin');
 
+const entryObj = require('./entry/entry.config.js');
 const plugins = require('./plugins');
 const { resolve } = require('./utils');
 const jsRules = require('./rules/jsRules');
 const cssRules = require('./rules/cssRules');
 
 const webpackConfig = {
-  entry: {
-    app: resolve('app/pages/index.tsx')
-  },
+  entry: entryObj,
   output: {
     path: resolve('distribution'),
     filename: 'js/[name].[hash].js'

@@ -45,7 +45,8 @@
       "@css/*": ["assets/css/view/*"],        /* 存放组件样式 */
       "@view/*": ["components/view/*"],       /* 存放不可复用的业务组件 */
       "@public/*": ["components/public/*"],   /* 存放可复用的业务组件 */
-      "@utils/*": ["utils/*"]                 /* 存放工具类 */
+      "@utils/*": ["utils/*"],                /* 存放工具类 */
+      "@store/*": ["store/*"]
     },                                        /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
     // "rootDirs": [],                        /* List of root folders whose combined content represents the structure of the project at runtime. */
     // "typeRoots": [],                       /* List of folders to include type definitions from. */

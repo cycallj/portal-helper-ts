@@ -25,6 +25,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "cache-loader": "^4.1.0",
     "css-loader": "^3.4.2",
+    "glob": "^7.1.6",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
@@ -46,6 +47,8 @@
     "mobx": "^5.15.4",
     "mobx-react": "^6.2.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.1.2"
   }
 }
