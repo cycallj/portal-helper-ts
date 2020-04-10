@@ -15,4 +15,4 @@ export class GlobalStore {
   }
 }
 
-export default new GlobalStore()
+export default new GlobalStore();

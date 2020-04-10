@@ -30,10 +30,10 @@ class Main extends Component {
 
         <div>
           <svg className="icon" aria-hidden="true">
-            <use xlinkHref="#icon-mgj"></use>
+            <use xlinkHref="#icon-mgj" />
           </svg>
           <svg className="icon" aria-hidden="true">
-            <use xlinkHref="#icon-youzan"></use>
+            <use xlinkHref="#icon-youzan" />
           </svg>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { createHashHistory } from 'history';
 const history = createHashHistory();
 import { Layout, Menu, Icon, Tooltip } from 'antd';
@@ -36,8 +36,8 @@ class Center extends Component {
               </Menu>
             </Sider>
             <Content>
-              <Route exact path="/" component={Home}></Route>
-              <Route path="/page" component={Page}></Route>
+              <Route exact path="/" component={Home} />
+              <Route path="/page" component={Page} />
             </Content>
           </Layout>
           <Footer>Footer</Footer>

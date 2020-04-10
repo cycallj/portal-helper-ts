@@ -5,7 +5,7 @@ import { hot } from 'react-hot-loader';
 import { ComponentExt } from '@utils/reactExt';
 
 interface IProps {
-  globalStore?: IGlobalStore.GlobalStore
+  globalStore?: IGlobalStore.GlobalStore;
 }
 
 @hot(module)
@@ -20,9 +20,8 @@ class Counter extends ComponentExt<IProps> {
   decrease = () => {
     this.props.globalStore.decrease(1);
   }
-  
+
   render() {
-    console.log(this.props)
     const { num } = this.props.globalStore;
     return (
       <div>
