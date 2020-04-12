@@ -1,5 +1,5 @@
-const { resolve }= require('./../utils');
-const tsImportPluginFactory = require('ts-import-plugin');
+const { resolve } = require('./../utils')
+const tsImportPluginFactory = require('ts-import-plugin')
 
 module.exports = [
   {
@@ -15,9 +15,7 @@ module.exports = [
           babelOptions: {
             // 不需要 .babelrc文件
             babelrc: false,
-            plugins: [
-              'react-hot-loader/babel'
-            ]
+            plugins: ['react-hot-loader/babel'],
           },
           getCustomTransformers: () => ({
             before: [
@@ -26,12 +24,12 @@ module.exports = [
                 libraryDirectory: 'lib',
                 // true：使用组件的less文件
                 // css：使用css文件，但同时不能定制主题
-                style: true
-              })
-            ]
-          })
-        }
-      }
-    ]
-  }
-];
+                style: true,
+              }),
+            ],
+          }),
+        },
+      },
+    ],
+  },
+]

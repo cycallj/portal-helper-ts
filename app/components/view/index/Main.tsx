@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
+import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
 
-import Test from '@public/Test';
-import Counter from '@view/index/Counter/Counter';
+import Test from '@public/Test'
+import Counter from '@view/index/Counter/Counter'
 
-import '@css/index/main.scss';// 在 tsconfig.json 里配置
+import '@css/index/main.scss' // 在 tsconfig.json 里配置
 
 @hot(module)
 class Main extends Component {
   constructor(props: any) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -24,9 +24,9 @@ class Main extends Component {
           <div>12124234</div>
         </div>
 
-        <Test/>
+        <Test />
 
-        <Counter/>
+        <Counter />
 
         <div>
           <svg className="icon" aria-hidden="true">
@@ -37,8 +37,8 @@ class Main extends Component {
           </svg>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Main;
+export default Main

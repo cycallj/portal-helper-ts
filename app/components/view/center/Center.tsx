@@ -1,25 +1,27 @@
-import React, { Component } from 'react';
-import { hot } from 'react-hot-loader';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { createHashHistory } from 'history';
-const history = createHashHistory();
-import { Layout, Menu, Icon, Tooltip } from 'antd';
-const { Header, Footer, Sider, Content } = Layout;
+import React, { Component } from 'react'
+import { hot } from 'react-hot-loader'
+import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { createHashHistory } from 'history'
+const history = createHashHistory()
+import { Layout, Menu, Icon, Tooltip } from 'antd'
+const { Header, Footer, Sider, Content } = Layout
 
-import Home from '@view/center/Home/Home';
-import Page from '@view/center/Page/Page';
+import Home from '@view/center/Home/Home'
+import Page from '@view/center/Page/Page'
+
+import '@css/center/center.scss' // 在 tsconfig.json 里配置
 
 @hot(module)
 class Center extends Component {
   constructor(props: any) {
-    super(props);
+    super(props)
   }
 
   render() {
     return (
       <Router>
         <Layout>
-          <Header style={{color:'#ff6600'}}>Header</Header>
+          <Header className="my-header">Header</Header>
           <Layout>
             <Sider>
               <Menu theme="dark" mode="inline">
@@ -29,7 +31,7 @@ class Center extends Component {
                   </Link>
                 </Menu.Item>
                 <Menu.Item>
-                  <Link to={"/page"} replace>
+                  <Link to={'/page'} replace>
                     <span>Page</span>
                   </Link>
                 </Menu.Item>
@@ -43,8 +45,8 @@ class Center extends Component {
           <Footer>Footer</Footer>
         </Layout>
       </Router>
-    );
+    )
   }
 }
 
-export default Center;
+export default Center

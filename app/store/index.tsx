@@ -1,3 +1,3 @@
-import globalStore from './globalStore/globalStore';
+import globalStore from './globalStore/globalStore'
 
-export default { globalStore };
+export default { globalStore }

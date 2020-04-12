@@ -1,4 +1,4 @@
-import { GlobalStore as GlobalStoreModel } from './globalStore';
+import { GlobalStore as GlobalStoreModel } from './globalStore'
 
 export as namespace IGlobalStore
 

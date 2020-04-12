@@ -1,8 +1,9 @@
 {
-  "extends": ["tslint:recommended","tslint-react"],
+  "extends": ["tslint:recommended", "tslint-react"],
   "rules": {
     "no-console": true,
     "jsx-boolean-value": false,
-    "semicolon":true
+    "semicolon": false,
+    "jsx-wrap-multiline": false
   }
 }

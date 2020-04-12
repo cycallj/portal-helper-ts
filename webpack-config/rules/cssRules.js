@@ -1,5 +1,5 @@
-const { resolve }= require('./../utils');
-const theme = require('./../theme');
+const { resolve } = require('./../utils')
+const theme = require('./../theme')
 
 module.exports = [
   {
@@ -8,26 +8,26 @@ module.exports = [
     include: [resolve('app')],
     use: [
       {
-        loader: 'style-loader'
+        loader: 'style-loader',
       },
       {
         loader: 'cache-loader',
         options: {
-          cacheDirectory: resolve('.cache-loader')
-        }
+          cacheDirectory: resolve('.cache-loader'),
+        },
       },
       {
-        loader: 'css-loader' // 可选项：css module options or ('typings-for-css-modules-loader')
+        loader: 'css-loader', // 可选项：css module options or ('typings-for-css-modules-loader')
       },
       {
         loader: 'sass-loader',
         options: {
           sassOptions: {
-            includePaths: [resolve('app/assets/css')]
-          }
-        }
-      }
-    ]
+            includePaths: [resolve('app/assets/css')],
+          },
+        },
+      },
+    ],
   },
   {
     test: /\.less$/,
@@ -35,10 +35,10 @@ module.exports = [
     include: [resolve('node_modules')],
     use: [
       {
-        loader: 'style-loader'
+        loader: 'style-loader',
       },
       {
-        loader: 'css-loader'
+        loader: 'css-loader',
       },
       {
         loader: 'less-loader',
@@ -46,9 +46,9 @@ module.exports = [
           // 根据antd官网进行主题修改
           modifyVars: theme,
           // 禁用内联js代码，这个功能用于禁用在样式表里面写js代码
-          javascriptEnabled: true
-        }
-      }
-    ]
-  }
-];
+          javascriptEnabled: true,
+        },
+      },
+    ],
+  },
+]
