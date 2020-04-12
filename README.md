@@ -23,3 +23,8 @@ http://www.fhd001.com/support/center/center.html#/
     import '@css/index/main.scss';
 6.  空行
 7.  tsx 文件内部逻辑
+
+## 需要优化点
+
+1.  axios 的封装
+2.  api 接口的接口规范、注释
