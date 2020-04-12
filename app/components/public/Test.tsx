@@ -5,7 +5,7 @@ import { Button } from 'antd';
 import { ComponentExt } from '@utils/reactExt';
 
 const log = (target: any) => {
-  console.log(target);
+  // console.log(target);
 };
 
 @log // 装饰器：一种语法糖

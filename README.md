@@ -1,6 +1,10 @@
 # portal-helper-ts
 http://www.fhd001.com/support/center/center.html#/
 
+## 需要安装的 vscode 插件
+1.  TSLint: https://palantir.github.io/tslint/rules/
+2.  stylelint
+
 ## tsx 书写约定
 1.  import 外部包
 import React, { Component } from 'react';
