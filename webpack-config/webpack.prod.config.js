@@ -12,6 +12,7 @@ const webpackConfig = {
   output: {
     path: resolve('distribution'),
     filename: 'js/[name].[hash].js',
+    publicPath: 'http://img1.fhd001.com/message',
   },
   module: {
     rules: [...jsRules, ...cssRules],

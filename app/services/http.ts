@@ -1,12 +1,10 @@
 import qs from 'qs'
 
 const debugUrl = '/api'
-const productUrl = 'http://www.fhd001.com' // TODO:https?
+const productUrl = '//www.fhd001.com' // TODO:https?
 
 const request = (type: string, url: string, obj: any) => {
-  // const realUrl = module.hot ? debugUrl + url : productUrl + url;
-  // const realUrl = productUrl + url
-  const realUrl = debugUrl + url
+  const realUrl = module.hot ? debugUrl + url : productUrl + url
 
   return new Promise((success, failure) => {
     fetch(realUrl, {

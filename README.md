@@ -28,3 +28,10 @@ http://www.fhd001.com/support/center/center.html#/
 
 1.  axios 的封装
 2.  api 接口的接口规范、注释
+
+## dev 环境开发步骤
+
+1.  host 切换成本地，例子：192.168.0.46 www.fhd001.com
+2.  npm start
+3.  访问 www.fhd001.com:3000/
+4.  请求接口需要登陆的话，提前到 www.fhd001.com 登陆
