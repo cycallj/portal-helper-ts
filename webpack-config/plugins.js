@@ -23,6 +23,7 @@ files.forEach((page) => {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
       },
+      chunks: [key, 'manifest', 'vendor', 'common'],
     })
   )
 })
