@@ -6,11 +6,30 @@ const { resolve } = require('./utils')
 const jsRules = require('./rules/jsRules')
 const cssRules = require('./rules/cssRules')
 
+const port = 8080
+
 const webpackConfig = {
   entry: entryObj,
   output: {
     path: resolve('distribution'),
     filename: 'js/[name].[hash].js',
+  },
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './distribution',
+    inline: true,
+    hot: true,
+    port: port,
+    open: false,
+    disableHostCheck: true,
+    proxy: {
+      '/api': {
+        target: 'http://www.fhd001.com/',
+        // pathRewrite: {'^/api' : '/'},
+        // changeOrigin: true,
+      },
+    },
   },
   module: {
     rules: [...jsRules, ...cssRules],

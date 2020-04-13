@@ -4,7 +4,7 @@
   "description": "http://www.fhd001.com/support/center/center.html#/",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack-config/webpack.config.js --mode development --hot",
+    "dev": "webpack-dev-server --config webpack-config/webpack.config.js",
     "build": "webpack --config webpack-config/webpack.prod.config.js",
     "lint": "tslint --project ./tsconfig.json && stylelint \"./app/**/*.scss\""
   },
