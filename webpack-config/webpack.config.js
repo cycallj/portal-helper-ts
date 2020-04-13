@@ -1,4 +1,5 @@
-const TsconfigPahtsPlugin = require('tsconfig-paths-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const webpack = require('webpack')
 
 const entryObj = require('./entry/entry.config.js')
 const plugins = require('./plugins')
@@ -23,13 +24,6 @@ const webpackConfig = {
     port: port,
     open: false,
     disableHostCheck: true,
-    proxy: {
-      '/api': {
-        target: 'http://www.fhd001.com/',
-        // pathRewrite: {'^/api' : '/'},
-        // changeOrigin: true,
-      },
-    },
   },
   module: {
     rules: [...jsRules, ...cssRules],
@@ -37,13 +31,13 @@ const webpackConfig = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'], //该参数将.jsx添加进去，可以再 js中 import加载.jsx
     plugins: [
-      new TsconfigPahtsPlugin({
+      new TsconfigPathsPlugin({
         // 配置文件引入 tsconfig.json
         configFile: resolve('tsconfig.json'),
       }),
     ],
   },
-  plugins: [...plugins],
+  plugins: [...plugins, new webpack.HotModuleReplacementPlugin()],
 }
 
 module.exports = webpackConfig

@@ -9,7 +9,7 @@ let files = glob.sync(path.resolve(resolve('app/pages'), '**/*.tsx'))
 files.forEach((page) => {
   let key = page.replace(/(.*\/)*([^.]+).*/gi, '$2')
 
-  entryObj[key] = ['webpack-hot-middleware/client', page]
+  entryObj[key] = [page]
 })
 
 module.exports = entryObj

@@ -1,6 +1,6 @@
 const TsconfigPahtsPlugin = require('tsconfig-paths-webpack-plugin')
 
-const entryObj = require('./entry/entry.config.js')
+const entryObj = require('./entry/entry.prod.config.js')
 const plugins = require('./plugins')
 const { resolve } = require('./utils')
 const jsRules = require('./rules/jsRules')
