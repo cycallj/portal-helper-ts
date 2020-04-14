@@ -1,6 +1,11 @@
 # portal-helper-ts
 
-http://www.fhd001.com/support/center/center.html#/
+1.  Rantron PC 前端框架（多页面）
+2.  老版示例：http://www.fhd001.com/support/center/center.html#/
+
+## 技术栈
+
+1.  typescript + react + mobx + antd(v4) + axios + webpack
 
 ## 需要安装的 vscode 插件
 
@@ -22,12 +27,20 @@ http://www.fhd001.com/support/center/center.html#/
 5.  import 静态文件
     import '@css/index/main.scss';
 6.  空行
-7.  tsx 文件内部逻辑
+7.  文件内部变量声明
+8.  空行
+9.  tsx 文件内部逻辑
+
+## 静态图片资源引入约定
+
+1.  统一使用静态资源服务器上的资源，不在项目内引入，故没有 fileLoader
 
 ## 需要优化点
 
-1.  axios 的封装
-2.  api 接口的接口规范、注释
+1.  react hook 进行开发
+2.  axios 的封装
+3.  api 接口的接口规范、注释
+4.  打包之前，需要删除整个 distribution 文件夹，再打包，否则会有老文件遗留。
 
 ## dev 环境开发步骤
 

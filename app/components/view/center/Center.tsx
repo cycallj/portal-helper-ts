@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader'
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { createHashHistory } from 'history'
 const history = createHashHistory()
-import { Layout, Menu, Icon, Tooltip } from 'antd'
+import { Layout, Menu } from 'antd'
 const { Header, Footer, Sider, Content } = Layout
 
 import Home from '@view/center/Home/Home'
